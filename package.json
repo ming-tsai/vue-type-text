@@ -1,5 +1,5 @@
 {
-  "name": "vue-type-effect",
+  "name": "@tsaibot/vue-type-effect",
   "version": "0.1.0",
   "private": true,
   "scripts": {
