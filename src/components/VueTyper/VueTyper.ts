@@ -3,37 +3,46 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class VueTyper extends Vue {
   @Prop({
-    validator: (value) => value >= 0,
-    default: 0,
+    validator: value => value >= 0,
+    default: 0
   })
   private repeate!: number;
   @Prop({
-    validator: (value) => value >= 0.0,
-    default: 2000,
+    validator: value => value >= 0.0,
+    default: 2000
   })
   private timeTakes!: number;
 
   @Prop({
     required: true,
-    validator: (value) => value && value.length,
+    validator: value => value && value.length
   })
   private text!: string | string[];
 
-  mounted() {
-    this.writeInit();
-    setTimeout(() => {
-      this.eraseInit();
-    }, 3000);
+  @Prop({
+    validator: value => ["p", "h1", "h2", "h3", "h4", "span"].includes(value),
+    default: "span"
+  })
+  private tag!: string;
+
+  async mounted() {
+    await this.writeInit();
+    await this.delay(this.timeTakes * 2);
+    this.eraseInit();
+  }
+
+  delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   private isDone = false;
   private index = 0;
   private bindingText = "";
-  writeInit() {
+  async writeInit() {
     if (typeof this.text === "string") {
       this.index = 0;
       this.bindingText = "";
-      this.writeText(this.text);
+      await this.writeText(this.text);
     }
   }
 
@@ -46,7 +55,6 @@ export default class VueTyper extends Vue {
       } else {
         this.isDone = false;
       }
-      
       this.appendText(text[this.index]);
     }, period);
   }
@@ -73,7 +81,6 @@ export default class VueTyper extends Vue {
       } else {
         this.isDone = false;
       }
-      
       this.removeText(this.index);
     }, period);
   }

@@ -1,7 +1,7 @@
 <template>
-  <component :is="'div'">
+  <component :is="tag">
     <span class="s-typer">{{ bindingText }}</span>
-    <span class="caret"></span>
+    <span class="caret" v-if="!isDone"></span>
   </component>
 </template>
 

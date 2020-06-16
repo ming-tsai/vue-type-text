@@ -1,7 +1,11 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <s-typer :text="msg" :tag="'h1'" />
+    <s-typer :text="msg" :tag="'h2'" />
+    <s-typer :text="msg" :tag="'h3'" />
+    <s-typer :text="msg" :tag="'h3'" />
     <s-typer :text="msg" />
+    <s-typer :text="msg" :tag="'p'" />
   </div>
 </template>
 
