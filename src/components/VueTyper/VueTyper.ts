@@ -9,7 +9,7 @@ export default class VueTyper extends Vue {
   private repeate!: number;
   @Prop({
     validator: value => value >= 0.0,
-    default: 1000
+    default: 2000
   })
   private timeTakes!: number;
 
@@ -40,26 +40,29 @@ export default class VueTyper extends Vue {
   async writeInit() {
     if (typeof this.text === "string") {
       await this.writeText(this.text);
-      await this.delay(this.timeTakes * 2);
-      await this.eraseText(this.text);
+      await this.delay(this.timeTakes);
       this.isDone = true;
     } else {
       if(Array.isArray(this.text))
       {
-        await this.writeText(this.text[this.arrayIndex]);
-        await this.delay(this.timeTakes * 2);
-        await this.eraseText(this.text[this.arrayIndex]);
-        if(this.arrayIndex >= this.text.length - 1) {
-          this.arrayIndex = 0;
-        }else {
-          this.arrayIndex++;
-        }
-        
-        setTimeout(() => {
-          this.writeInit();
-        }, this.timeTakes * 2 * 1.5);
+        this.setIntervalImmediately(async () => {
+          await this.writeText(this.text[this.arrayIndex]);
+          await this.delay(this.timeTakes * 1.5);
+          await this.eraseText(this.text[this.arrayIndex]);
+          if(this.arrayIndex >= this.text.length - 1) {
+            this.arrayIndex = 0;
+          }else {
+            this.arrayIndex++;
+          }
+          return;
+        }, this.timeTakes * 1.4 * 2);
       }
     }
+  }
+
+  setIntervalImmediately(func: any, interval: number) {
+    func();
+    return setInterval(func, interval);
   }
 
   async writeText(text: string) {
