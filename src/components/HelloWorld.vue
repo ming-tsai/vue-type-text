@@ -1,10 +1,12 @@
 <template>
   <div class="hello">
-    <s-typer :text="['vue-typer', 'VueTyper']" :tag="'h1'" />
+    <s-typer :text="['vue-typer', 'VueTyper', 'vueTyper']" :tag="'h1'" />
     <s-typer :text="msg" :tag="'h2'" :timesTake="2000" />
     <s-typer :text="msg" :tag="'h3'" :timesTake="2000" />
     <s-typer :text="msg" :tag="'h3'" :timesTake="2000" />
     <s-typer :text="msg" :timesTake="2000" />
+    <br />
+    <strong><s-typer :text="msg" :timesTake="2000"/></strong>
     <s-typer :text="msg" :tag="'p'" :timesTake="2000" />
   </div>
 </template>
