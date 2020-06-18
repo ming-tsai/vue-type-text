@@ -49,5 +49,23 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` yarn install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ming-tsai/vue-type-effect.git"
+  },
+  "keywords": [
+    "vue-typer",
+    "vue",
+    "vue-component",
+    "vue-type-effect"
+  ],
+  "author": "Ming Tsai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ming-tsai/vue-type-effect/issues"
+  },
+  "homepage": "https://github.com/ming-tsai/vue-type-effect#readme"
 }
