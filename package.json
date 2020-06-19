@@ -1,6 +1,6 @@
 {
-  "name": "@ming-tsai/vue-typed",
-  "version": "0.1.0-preview5",
+  "name": "@tsaibot/vue-typed",
+  "version": "0.1.0-preview6",
   "description": "Typed components for VueJs",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
     "vue-typer",
     "vue",
     "vue-component",
-    "vue-type-effect"
+    "vue-type-effect",
+    "vue-typed"
   ],
   "author": "Ming Tsai",
   "license": "MIT",
@@ -61,8 +62,5 @@
   },
   "engines": {
     "node": ">=10"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
