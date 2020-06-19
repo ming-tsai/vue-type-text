@@ -62,4 +62,4 @@ export default Vue.extend({
 
 ```
 ## License
-Code released under [MIT](https://github.com/ming-tsai/dotnetexplorer/blob/master/LICENSE) license.
+Code released under [MIT](https://github.com/ming-tsai/vue-typed/blob/master/LICENSE) license.
