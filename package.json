@@ -1,7 +1,7 @@
 {
-  "name": "@tsaibot/vue-typed",
-  "version": "0.1.0-preview3",
-  "description": "A vue typed componnets",
+  "name": "@ming-tsai/vue-typed",
+  "version": "0.1.0-preview5",
+  "description": "Typed components for VueJs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ming-tsai/vue-typed.git"
@@ -61,5 +61,8 @@
   },
   "engines": {
     "node": ">=10"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
