@@ -13,8 +13,8 @@ export default Vue.extend({
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <vue-typed :tag="'h1'" :text="['VueTyped', 'vue-typed', 'vueTyped']"/>
-    <vue-typed :tag="'p'" :text="'Welcome to Your VueTyped'" />
+    <vue-typed tag="h1" :text="['VueTyped', 'vue-typed', 'vueTyped']"/>
+    <vue-typed tag="p" :text="'Welcome to Your VueTyped'" />
   </div>
 </template>
 
