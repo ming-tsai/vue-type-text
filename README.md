@@ -1,4 +1,4 @@
-# vue-type-effect
+# vue-typed
 
 ## Project setup
 ```
