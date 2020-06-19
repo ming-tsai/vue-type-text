@@ -1,0 +1,33 @@
+.caret {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 1px;
+  background: black;
+  margin-left: 3px;
+  position: relative;
+  top: 2px;
+  -webkit-animation: caret-animation 0.5s linear infinite;
+  animation: caret-animation 0.5s linear infinite;
+}
+
+.caret:empty:before {
+  content: "\200b"; /* unicode zero width space character */
+}
+
+@keyframes caret-animation {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
