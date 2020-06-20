@@ -69,7 +69,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/vue-typed.esm.js',
+      file: 'dist/vue-type-text.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -103,9 +103,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-typed.ssr.js',
+      file: 'dist/vue-type-text.ssr.js',
       format: 'cjs',
-      name: 'VueTyped',
+      name: 'VueTypeText',
       exports: 'named',
       globals,
     },
@@ -132,9 +132,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-typed.min.js',
+      file: 'dist/vue-type-text.min.js',
       format: 'iife',
-      name: 'VueTyped',
+      name: 'VueTypeText',
       exports: 'named',
       globals,
     },

@@ -1,32 +1,33 @@
 {
-  "name": "@tsaibot/vue-typed",
-  "version": "0.1.0-preview8",
+  "name": "vue-type-text",
+  "version": "0.1.1",
   "description": "Typed components for VueJs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ming-tsai/vue-typed.git"
+    "url": "git+https://github.com/ming-tsai/vue-type-text.git"
   },
   "keywords": [
-    "vue-typer",
+    "typer",
     "vue",
-    "vue-component",
-    "vue-type-effect",
-    "vue-typed"
+    "animation",
+    "component",
+    "typed",
+    "vue-type-text"
   ],
   "author": "Ming Tsai",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ming-tsai/vue-typed/issues"
+    "url": "https://github.com/ming-tsai/vue-type-text/issues"
   },
-  "homepage": "https://github.com/ming-tsai/vue-typed#readme",
-  "main": "dist/vue-typed.ssr.js",
-  "browser": "dist/vue-typed.esm.js",
-  "module": "dist/vue-typed.esm.js",
-  "unpkg": "dist/vue-typed.min.js",
-  "types": "vue-typed.d.ts",
+  "homepage": "https://github.com/ming-tsai/vue-type-text#readme",
+  "main": "dist/vue-type-text.ssr.js",
+  "browser": "dist/vue-type-text.esm.js",
+  "module": "dist/vue-type-text.esm.js",
+  "unpkg": "dist/vue-type-text.min.js",
+  "types": "vue-type-text.d.ts",
   "files": [
     "dist/*",
-    "vue-typed.d.ts",
+    "vue-type-text.d.ts",
     "src/**/*.vue"
   ],
   "scripts": {

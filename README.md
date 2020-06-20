@@ -1,6 +1,6 @@
-# vue-typed 
-![Node.js CI](https://github.com/ming-tsai/vue-typed/workflows/Node.js%20CI/badge.svg?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ming-tsai_vue-typed&metric=alert_status)](https://sonarcloud.io/dashboard?id=ming-tsai_vue-typed)
+# vue-type-text 
+![Node.js CI](https://github.com/ming-tsai/vue-type-text/workflows/Node.js%20CI/badge.svg?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ming-tsai_vue-type-text&metric=alert_status)](https://sonarcloud.io/dashboard?id=ming-tsai_vue-type-text)
 
 > Typed components for VueJs.
 
@@ -14,16 +14,16 @@ You need [Vue.js](https://vuejs.org/) **version 2.5+**.
 
 ### 1. Install via npm
 ```bash
-npm i @tsaibot/vue-typed
+npm i @tsaibot/vue-type-text
 // or
-yarn add @tsaibot/vue-typed
+yarn add @tsaibot/vue-type-text
 ```
-### 2. Import and use VueTyped
+### 2. Import and use VueTypeText
 ```js
 import Vue from 'vue';
-import VueTyped from '@tsaibot/vue-typed';
+import VueTypeText from '@tsaibot/vue-type-text';
 
-Vue.use(VueTyped);
+Vue.use(VueTypeText);
 
 // this is an example vue settings
 Vue.config.productionTip = false;
@@ -36,12 +36,12 @@ Or import on your view
 ```html
 <script lang="ts">
 import Vue from 'vue';
-import VueTyped from '@/vue-typed.vue';
+import VueTypeText from '@/vue-type-text.vue';
 
 export default Vue.extend({
   name: 'YourViewName',
   components: {
-    VueTyped
+    VueTypeText
   }
 });
 </script>
@@ -50,16 +50,16 @@ export default Vue.extend({
 ```html
 <!-- your code here -->
 <!-- an example using as h1-->
-<vue-typed tag="h1" :text="['VueTyped', 'vue-typed', 'vueTyped']"/>
+<vue-type-text tag="h1" :text="['VueTypeText', 'vue-type-text', 'vueTyped']"/>
 <!-- an example using as span-->
-<vue-typed text="Welcome to Your VueTyped" />
+<vue-type-text text="Welcome to Your VueTypeText" />
 <!-- your code here -->
 ```
 ### Alternatively
 ```html
-<!-- VueTyped JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/@tsaibot/vue-typed/dist/vue-typed.min.js"></script>
+<!-- VueTypeText JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@tsaibot/vue-type-text/dist/vue-type-text.min.js"></script>
 
 ```
 ## License
-Code released under [MIT](https://github.com/ming-tsai/vue-typed/blob/master/LICENSE) license.
+Code released under [MIT](https://github.com/ming-tsai/vue-type-text/blob/master/LICENSE) license.

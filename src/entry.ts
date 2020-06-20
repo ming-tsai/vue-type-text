@@ -1,7 +1,7 @@
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
 
 // Import vue component
-import component from '@/vue-typed.vue';
+import component from '@/vue-type-text.vue';
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,10 +13,10 @@ interface InstallableComponent extends VueConstructor<_Vue> {
 }
 
 // install function executed by Vue.use()
-const install: InstallFunction = function installVueTyped(Vue: typeof _Vue) {
+const install: InstallFunction = function installVueTypeText(Vue: typeof _Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('VueTyped', component);
+  Vue.component('VueTypeText', component);
 };
 
 // Create module definition for Vue.use()

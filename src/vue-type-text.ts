@@ -1,13 +1,13 @@
 import Vue from 'vue';
 
-interface VueType {
+interface VueTypeText {
   isDone: boolean;
   arrayIndex: number;
   bindingText: string;
 }
 
 export default Vue.extend({
-  name: 'VueTyped', // vue component name
+  name: 'VueTypeText', // vue component name
   props: {
     timeTakes: {
       type: Number,
@@ -36,7 +36,7 @@ export default Vue.extend({
       validator: value => ['p', 'h1', 'h2', 'h3', 'h4', 'span'].includes(value)
     }
   },
-  data(): VueType {
+  data(): VueTypeText {
     return {
       isDone: false,
       arrayIndex: 0,
