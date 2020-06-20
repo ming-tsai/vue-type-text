@@ -4,6 +4,9 @@ interface VueTypeText {
   isDone: boolean;
   arrayIndex: number;
   bindingText: string;
+  writeTimer: any;
+  eraseTimer: any;
+  arrayTimer: any;
 }
 
 export default Vue.extend({
@@ -40,7 +43,10 @@ export default Vue.extend({
     return {
       isDone: false,
       arrayIndex: 0,
-      bindingText: ''
+      bindingText: '',
+      writeTimer: null,
+      eraseTimer: null,
+      arrayTimer: null,
     };
   },
   methods: {
@@ -51,7 +57,7 @@ export default Vue.extend({
         this.isDone = true;
       } else {
         if (Array.isArray(this.text)) {
-          this.setIntervalImmediately(
+          this.arrayTimer = this.setIntervalImmediately(
             async () => await this.managerArray(),
             this.timeTakes * 1.4 * 2
           );
@@ -62,9 +68,9 @@ export default Vue.extend({
       let index = 0;
       this.bindingText = '';
       const period = this.timeTakes / text.length;
-      const timer = setInterval(() => {
+      this.writeTimer = setInterval(() => {
         if (index >= text.length - 1) {
-          clearInterval(timer);
+          clearInterval(this.writeTimer);
         }
         index = this.appendText(text[index], index);
       }, period);
@@ -78,9 +84,9 @@ export default Vue.extend({
       let index = text.length;
       this.bindingText = text;
       const period = this.timeTakes / text.length;
-      const timer = setInterval(() => {
+      this.eraseTimer = setInterval(() => {
         if (index <= 0) {
-          clearInterval(timer);
+          clearInterval(this.eraseTimer);
         }
         index = this.removeText(index);
       }, period);
@@ -112,5 +118,23 @@ export default Vue.extend({
   },
   async mounted() {
     await this.writeInit();
+  },
+  watch: {
+    text() {
+      if(this.writeTimer != null) {
+        clearInterval(this.writeTimer);
+      }
+
+      if(this.eraseTimer != null) {
+        clearInterval(this.eraseTimer);
+      }
+
+      if(this.arrayTimer != null) {
+        this.arrayIndex = 0;
+        clearInterval(this.arrayTimer);
+      }
+
+      this.writeInit();
+    }
   },
 });

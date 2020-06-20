@@ -6,6 +6,11 @@ export default Vue.extend({
   name: 'ServeDev',
   components: {
     VueTypeText
+  },
+  data() {
+    return {
+      bindingText: "Welcome to VueTypeText",
+    };
   }
 });
 </script>
@@ -14,7 +19,8 @@ export default Vue.extend({
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <vue-type-text tag="h1" :text="['VueTypeText', 'vue-type-text', 'vue type text']"/>
-    <vue-type-text tag="p" text="Welcome to Your VueTypeText" />
+    <vue-type-text tag="p" :text="bindingText" />
+    <button @click="bindingText = 'Welcome to Your typed demo'">Change text</button>
   </div>
 </template>
 

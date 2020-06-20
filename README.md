@@ -58,8 +58,7 @@ export default Vue.extend({
 ### Alternatively
 ```html
 <!-- VueTypeText JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/vue-type-text@0.1.1/dist/vue-type-text.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/vue-type-text/dist/vue-type-text.min.js"></script>
 ```
 ## License
 Code released under [MIT](https://github.com/ming-tsai/vue-type-text/blob/master/LICENSE) license.
