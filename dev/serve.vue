@@ -1,11 +1,11 @@
 <script lang="ts">
 import Vue from 'vue';
-import VueTyped from '@/vue-typed.vue';
+import VueTypeText from '@/vue-type-text.vue';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
-    VueTyped
+    VueTypeText
   }
 });
 </script>
@@ -13,8 +13,8 @@ export default Vue.extend({
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <vue-typed tag="h1" :text="['VueTyped', 'vue-typed', 'vueTyped']"/>
-    <vue-typed tag="p" text="Welcome to Your VueTyped" />
+    <vue-type-text tag="h1" :text="['VueTypeText', 'vue-type-text', 'vue type text']"/>
+    <vue-type-text tag="p" text="Welcome to Your VueTypeText" />
   </div>
 </template>
 
