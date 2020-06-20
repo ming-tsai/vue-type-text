@@ -8,5 +8,5 @@ export interface InstallableComponent extends VueConstructor<Vue> {
   install: InstallFunction;
 }
 
-declare const VueTyped: InstallableComponent;
-export default VueTyped;
+declare const VueTypeText: InstallableComponent;
+export default VueTypeText;
