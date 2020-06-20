@@ -14,14 +14,14 @@ You need [Vue.js](https://vuejs.org/) **version 2.5+**.
 
 ### 1. Install via npm
 ```bash
-npm i @tsaibot/vue-type-text
+npm i vue-type-text
 // or
-yarn add @tsaibot/vue-type-text
+yarn add vue-type-text
 ```
 ### 2. Import and use VueTypeText
 ```js
 import Vue from 'vue';
-import VueTypeText from '@tsaibot/vue-type-text';
+import VueTypeText from 'vue-type-text';
 
 Vue.use(VueTypeText);
 
@@ -58,7 +58,7 @@ export default Vue.extend({
 ### Alternatively
 ```html
 <!-- VueTypeText JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/@tsaibot/vue-type-text/dist/vue-type-text.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-type-text@0.1.1/dist/vue-type-text.min.js"></script>
 
 ```
 ## License
